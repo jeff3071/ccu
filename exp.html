@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel=stylesheet type="text/css" href="main.css">
+    <title>課程整合平台</title>
+<script src="nav.js"></script>
+</head>
+
+<body>
+    <div id="tab-demo">
+        <!-- <div class="exp_style">
+            <a href="https://hackmd.io/-LgIgN20R5m4nT5Pp59obQ" class="exp">學長姐經驗分享</a> 
+        </div> -->
+
+        <ul class="tab-title">
+            <li>
+                <a href="#tab01">卓奇勳</a>
+            </li>
+            <li>
+                <a href="#tab02">辛浩昀</a>
+            </li>
+            <li>
+                <a href="#tab03">李芷晴</a>
+            </li>
+            <li><a href="#tab04">李宜靜</a></li>
+            <li><a href="#tab05">葉珏廷</a></li>
+        </ul>
+
+        <div id="tab01" class="tab-inner">
+            <embed class="pdf" height="95%" width="100%" src="exp/104_1 卓奇勳_客製化學程授權書_申請書.pdf"> </embed>
+        </div>
+        <div id="tab02" class="tab-inner">
+             <embed class="pdf" height="95%" width="100%" src="exp/104_1 辛浩昀_客製化學程授權書_申請書.pdf"> </embed>
+        </div>
+        <div id="tab03" class="tab-inner">
+             <embed class="pdf" height="95%" width="100%" src="exp/104_2 李芷晴_客製化學程授權書_申請書.pdf"> </embed>
+        </div>
+        <div id="tab04" class="tab-inner">
+             <embed class="pdf" height="95%" width="100%" src="exp/105_1 李宜靜_客製化學程授權書_申請書.pdf"> </embed>
+        </div>
+        <div id="tab05" class="tab-inner">
+             <embed class="pdf" height="95%" width="100%" src="exp/105_1 葉珏廷_客製化學程授權書_申請書.pdf"> </embed>
+        </div>
+    </div>
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    $(function(){
+    var $li = $('ul.tab-title li');
+    $($li. eq(0) .addClass('active').find('a').attr('href')).siblings('.tab-inner').hide();
+
+    $li.click(function(){
+        $($(this).find('a'). attr ('href')).show().siblings ('.tab-inner').hide();
+        $(this).addClass('active'). siblings ('.active').removeClass('active');
+    });
+    });
+</script>
+</html>
